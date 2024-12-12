@@ -166,7 +166,7 @@ def process_uploaded_file(uploaded_file):
 
 
 # Streamlit UI
-st.title("Autostereogram Generator")
+st.title("Pattern and Depth Estimation App")
 
 model_type = st.sidebar.selectbox(
     "Select Depth Model", ["MiDaS_small", "DPT_Large", "DPT_Hybrid"]
