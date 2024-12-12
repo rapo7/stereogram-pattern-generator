@@ -133,6 +133,7 @@ def generate_pattern_from_prompt(prompt):
 # Load MiDaS model for depth estimation
 @st.cache_resource
 def load_midas_model(model_type="MiDaS_small"):
+    torch.hub._validate_not_a_forked_repo = lambda a, b, c: True
     midas = torch.hub.load("intel-isl/MiDaS", model_type)
     midas.eval()
     transform = Compose([ToTensor()])
